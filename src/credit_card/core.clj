@@ -22,39 +22,39 @@
                  :purchases     (credit-card.db/all-purchases)}})
 
 (def client (create-client-data "Maria" 920 "maria@gmail.com"))
+
 (println "\n\n\n Creating Client" client)
 
-
-(defn group-by-category [purchases]
-  (->> purchases
-       (group-by :category)
-       ))
-
-(println "\n\n\n Group by: "(group-by-category (credit-card.db/all-purchases)))
 
 (defn search-by-price-or-establishment [value purchases]
   (->> purchases
        (filter #(or (= (:establishment %) value)
                     (= (:price %) value)))))
 
-(println "\n\n\n Filter by Price or Establishment"(search-by-price-or-establishment "Nike" (credit-card.db/all-purchases)))
- 
+(println "\n\n\n Filter by Price or Establishment:" (search-by-price-or-establishment "Nike" (credit-card.db/all-purchases)))
+
 (defn sum-purchases
   [purchases]
   (->> purchases
-       (map :price))
-       (reduce +))
+       (map :price)
+       (reduce +)))
+
 (println "\n\n Sum off all prices:" (sum-purchases (credit-card.db/all-purchases)))
 
-(defn total-price-by-category [purchases]
-  (->> purchases
-       (vals)
-       (group-by :category)
-       (map sum-purchases)
-       (reduce +))
-  println)
+(defn sum-total-by-category
+  [[category purchases]]
 
-(total-price-by-category (credit-card.db/all-purchases))
+  {:category category
+  :total-value (sum-purchases purchases)}
+  )
+
+(defn total-price-by-category [purchases]
+  (->> purchases   
+       (group-by :category)
+       (map sum-total-by-category)
+       println))
+
+(println "\n\n Total price by Category:" (total-price-by-category (credit-card.db/all-purchases)))
 
 
 

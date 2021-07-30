@@ -1,8 +1,8 @@
 (ns credit-card.db)
 
 (refer-clojure :exclude [range iterate format max min])
-(use 'java-time)
 
+(use 'java-time)
 
 (defn all-purchases []
 [{:date       (format "dd/MM/yyyy" (zoned-date-time 2021 05 30))
