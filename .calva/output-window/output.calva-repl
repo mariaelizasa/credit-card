@@ -15,105 +15,165 @@
 ;   - `alt+up` and `alt+down` traverse up and down the REPL command history
 ;      when the cursor is after the last contents at the prompt
 ;   - Clojure lines in stack traces are peekable and clickable.
-clj꞉credit-card.core꞉>  ; Use `alt+enter` to evaluate
+clj꞉credit-card.core꞉> 
 ; Jack-in done.
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ClassNotFoundException) compiling at (src/credit_card/core.clj:4:10).
+; credit-card.db
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: db.clj
+#'credit-card.db/all-orders
+clj꞉credit-card.db꞉> 
+; Evaluating file: core.clj
+{{:date 1, :price 277, :commerce Mc Donalds, :categoria Food} {:date 2, :price 566, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 935, :commerce Nike, :categoria Locker Room} {:date 824, :price 483, :commerce Burguer King, :categoria Food}, {:date 63, :price 117, :commerce Riot Games, :categoria Leisure} {:date 5, :price 512, :commerce Sushi, :categoria Food}, {:date 6, :price 568, :commerce Burguer King, :categoria Food} {:date 8, :price 987, :commerce Family Park, :categoria Leisure}, {:date 9, :price 496, :commerce Spoletto, :categoria Food} {:date 24, :price 696, :commerce Adidas, :categoria Locker Room}}
+#'credit-card.core/client
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 356000, :initial-limit 400, :validate 10, :cvv 300}, :orders {{:date 1, :price 160, :commerce Mc Donalds, :categoria Food} {:date 2, :price 792, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 636, :commerce Nike, :categoria Locker Room} {:date 824, :price 110, :commerce Burguer King, :categoria Food}, {:date 63, :price 960, :commerce Riot Games, :categoria Leisure} {:date 5, :price 922, :commerce Sushi, :categoria Food}, {:date 6, :price 620, :commerce Burguer King, :categoria Food} {:date 8, :price 59, :commerce Family Park, :categoria Leisure}, {:date 9, :price 861, :commerce Spoletto, :categoria Food} {:date 24, :price 31, :commerce Adidas, :categoria Locker Room}}}
+nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
 #'credit-card.core/client
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 69, :data {:name Maria, :cpf 920, :email maria@gmail.com}}
+#'credit-card.core/client
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 71000, :initial-limit 400, :validate 10, :cvv 200, :orders {{:date 1, :price 240, :commerce Mc Donalds, :categoria Food} {:date 2, :price 722, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 55, :commerce Nike, :categoria Locker Room} {:date 824, :price 640, :commerce Burguer King, :categoria Food}, {:date 63, :price 377, :commerce Riot Games, :categoria Leisure} {:date 5, :price 985, :commerce Sushi, :categoria Food}, {:date 6, :price 854, :commerce Burguer King, :categoria Food} {:date 8, :price 497, :commerce Family Park, :categoria Leisure}, {:date 9, :price 348, :commerce Spoletto, :categoria Food} {:date 24, :price 824, :commerce Adidas, :categoria Locker Room}}}}
 nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 65, :data {:name Maria, :cpf 920, :email maria@gmail.com}}
+{nil [[{:date 1, :price 407, :commerce Mc Donalds, :categoria Food} {:date 2, :price 197, :commerce Bolovo, :categoria Locker Room}] [{:date 3, :price 40, :commerce Nike, :categoria Locker Room} {:date 824, :price 435, :commerce Burguer King, :categoria Food}] [{:date 63, :price 359, :commerce Riot Games, :categoria Leisure} {:date 5, :price 766, :commerce Sushi, :categoria Food}] [{:date 6, :price 83, :commerce Burguer King, :categoria Food} {:date 8, :price 547, :commerce Family Park, :categoria Leisure}] [{:date 9, :price 27, :commerce Spoletto, :categoria Food} {:date 24, :price 381, :commerce Adidas, :categoria Locker Room}]]}
+{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 537000, :initial-limit 400, :validate 10, :cvv 0, :orders {{:date 1, :price 60, :commerce Mc Donalds, :categoria Food} {:date 2, :price 722, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 807, :commerce Nike, :categoria Locker Room} {:date 824, :price 704, :commerce Burguer King, :categoria Food}, {:date 63, :price 172, :commerce Riot Games, :categoria Leisure} {:date 5, :price 842, :commerce Sushi, :categoria Food}, {:date 6, :price 918, :commerce Burguer King, :categoria Food} {:date 8, :price 411, :commerce Family Park, :categoria Leisure}, {:date 9, :price 752, :commerce Spoletto, :categoria Food} {:date 24, :price 557, :commerce Adidas, :categoria Locker Room}}}}
 nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 24, :data {:name Maria, :cpf 920, :email maria@gmail.com}}
+{nil [[{:date 1, :price 314, :commerce Mc Donalds, :categoria Food} {:date 2, :price 997, :commerce Bolovo, :categoria Locker Room}] [{:date 3, :price 834, :commerce Nike, :categoria Locker Room} {:date 824, :price 578, :commerce Burguer King, :categoria Food}] [{:date 63, :price 17, :commerce Riot Games, :categoria Leisure} {:date 5, :price 819, :commerce Sushi, :categoria Food}] [{:date 6, :price 499, :commerce Burguer King, :categoria Food} {:date 8, :price 568, :commerce Family Park, :categoria Leisure}] [{:date 9, :price 634, :commerce Spoletto, :categoria Food} {:date 24, :price 225, :commerce Adidas, :categoria Locker Room}]]}
 nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}}
+(nil)
 nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-; Execution error (ArityException) at credit-card.core/eval9245 (form-init4855315571699711776.clj:1).
-; Wrong number of args (2) passed to: clojure.core/rand-int
+(5)
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+()
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+()
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+()
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+#function[clojure.core/map/fn--5862]
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:23:1).
+; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.RT.get(Object, Object)" is null
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 1, :initial-limit 400, :validate 10, :cvv 0}}
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; Execution error (ClassCastException) at credit-card.core/eval9278 (form-init4855315571699711776.clj:1).
-; class clojure.lang.LongRange cannot be cast to class java.lang.Number (clojure.lang.LongRange is in unnamed module of loader 'app'; java.lang.Number is in module java.base of loader 'bootstrap')
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:23:1).
+; Cannot invoke "clojure.lang.IFn.invoke()" because the return value of "clojure.lang.RT.get(Object, Object)" is null
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-; Execution error (ArityException) at credit-card.core/eval9293 (form-init4855315571699711776.clj:1).
-; Wrong number of args (2) passed to: clojure.core/rand-int
+; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:23:1).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-; Syntax error reading source at (src/credit_card/core.clj:20:0).
-; Invalid number: 10Ò
+; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:24:1).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 83000, :initial-limit 400, :validate 10, :cvv 3000}}
+; Syntax error compiling at (src/credit_card/core.clj:24:1).
+; Can't take value of a macro: #'clojure.core/->>
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ArityException) compiling at (src/credit_card/core.clj:31:1).
+; Wrong number of args (1) passed to: clojure.core/group-by
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ArityException) compiling at (src/credit_card/core.clj:30:1).
+; Wrong number of args (1) passed to: clojure.core/group-by
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ArityException) compiling at (src/credit_card/core.clj:24:2).
+; Wrong number of args (1) passed to: clojure.core/group-by
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ArityException) compiling at (src/credit_card/core.clj:24:2).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Execution error (ArityException) at credit-card.core/eval9629 (form-init7220860130906949047.clj:24).
+; Wrong number of args (0) passed to: clojure.lang.PersistentArrayMap
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:24:1).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:23:1).
+; class clojure.lang.LazySeq cannot be cast to class clojure.lang.IFn (clojure.lang.LazySeq and clojure.lang.IFn are in unnamed module of loader 'app')
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; Syntax error (ArityException) compiling at (src/credit_card/core.clj:24:1).
+; Wrong number of args (1) passed to: clojure.core/group-by
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+{nil [[{:date 1, :price 54, :commerce Mc Donalds, :categoria Food} {:date 2, :price 386, :commerce Bolovo, :categoria Locker Room}] [{:date 3, :price 275, :commerce Nike, :categoria Locker Room} {:date 824, :price 567, :commerce Burguer King, :categoria Food}] [{:date 63, :price 390, :commerce Riot Games, :categoria Leisure} {:date 5, :price 427, :commerce Sushi, :categoria Food}] [{:date 6, :price 448, :commerce Burguer King, :categoria Food} {:date 8, :price 149, :commerce Family Park, :categoria Leisure}] [{:date 9, :price 535, :commerce Spoletto, :categoria Food} {:date 24, :price 348, :commerce Adidas, :categoria Locker Room}]]}
 nil
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-{:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 723000, :initial-limit 400, :validate 10, :cvv 500}}
+#function[credit-card.core/total-by-category]
 nil
 clj꞉credit-card.core꞉> 
-; Evaluating file: date.clj
-; Syntax error macroexpanding clojure.core/ns at (src/credit_card/date.clj:1:1).
-; ((require (quote [clj-time.core :as time]) (quote [clj-time.coerce :as tc]) (quote [clj-time.format :as f]))) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
-; Evaluation of file date.clj failed: class clojure.lang.Compiler$CompilerException
-
+#function[credit-card.core/total-by-category] {{:date 1, :price 736, :commerce Mc Donalds, :categoria Food} {:date 2, :price 538, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 785, :commerce Nike, :categoria Locker Room} {:date 824, :price 884, :commerce Burguer King, :categoria Food}, {:date 63, :price 190, :commerce Riot Games, :categoria Leisure} {:date 5, :price 545, :commerce Sushi, :categoria Food}, {:date 6, :price 572, :commerce Burguer King, :categoria Food} {:date 8, :price 489, :commerce Family Park, :categoria Leisure}, {:date 9, :price 215, :commerce Spoletto, :categoria Food} {:date 24, :price 478, :commerce Adidas, :categoria Locker Room}}
+nil
 clj꞉credit-card.core꞉> 
-clj꞉credit-card.date꞉> 
-; Evaluating file: date.clj
-; Syntax error macroexpanding clojure.core/ns at (src/credit_card/date.clj:1:1).
-; ((require (quote [clj-time.core :as time]) (quote [clj-time.coerce :as tc]) (quote [clj-time.format :as f]))) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
-; Evaluation of file date.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.date꞉> 
-clj꞉credit-card.date꞉> 
-; Evaluating file: db.clj
-; Syntax error reading source at (src/credit_card/db.clj:18:40).
-; Map literal must contain an even number of forms
-; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.date꞉> 
-clj꞉credit-card.db꞉> 
-; Evaluating file: db.clj
-{{:date 1, :price 800, :commerce Nerdstore, :categoria Vestuario} {:date 2, :price 800, :commerce Nerdstore, :categoria Vestuario}, {:date 3, :price 800, :commerce Nerdstore, :categoria Vestuario} {:date 3, :price 800, :commerce Nerdstore, :categoria Vestuario}}
-nil
-clj꞉credit-card.db꞉> 
-; Evaluating file: db.clj
-{{:date 1, :price 900, :commerce Mc Donalds, :categoria Food} {:date 2, :price 900, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 900, :commerce Nike, :categoria Locker Room} {:date 824, :price 900, :commerce Burguer King, :categoria Food}, {:date 63, :price 900, :commerce Riot Games, :categoria Leisure} {:date 5, :price 900, :commerce Sushi, :categoria Food}, {:date 6, :price 900, :commerce Burguer King, :categoria Food} {:date 8, :price 900, :commerce Family Park, :categoria Leisure}, {:date 9, :price 900, :commerce Spoletto, :categoria Food} {:date 24, :price 900, :commerce Adidas, :categoria Locker Room}}
-nil
-clj꞉credit-card.db꞉> 
-; Evaluating file: db.clj
-; Execution error (ArityException) at credit-card.db/eval9438 (form-init4855315571699711776.clj:1).
-; Wrong number of args (0) passed to: clojure.core/rand-int
-; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.db꞉> 
-clj꞉credit-card.db꞉> 
-; Evaluating file: db.clj
-{{:date 1, :price 122, :commerce Mc Donalds, :categoria Food} {:date 2, :price 542, :commerce Bolovo, :categoria Locker Room}, {:date 3, :price 870, :commerce Nike, :categoria Locker Room} {:date 824, :price 338, :commerce Burguer King, :categoria Food}, {:date 63, :price 682, :commerce Riot Games, :categoria Leisure} {:date 5, :price 940, :commerce Sushi, :categoria Food}, {:date 6, :price 132, :commerce Burguer King, :categoria Food} {:date 8, :price 796, :commerce Family Park, :categoria Leisure}, {:date 9, :price 26, :commerce Spoletto, :categoria Food} {:date 24, :price 730, :commerce Adidas, :categoria Locker Room}}
-nil
-clj꞉credit-card.db꞉> 
