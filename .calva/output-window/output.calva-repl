@@ -569,3 +569,78 @@ clj꞉credit-card.core꞉> 
 ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
 nil
 clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
+
+
+
+ Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 577422, :limit 21, :validate 30/07/2028, :cvv 8991, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+
+
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+
+
+ Sum off all prices: 1658.17
+({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+
+ Total price by Category: nil
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
+
+
+
+ Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 406593, :limit 964, :validate 30/07/2028, :cvv 4995, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+
+
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+
+
+ Sum off all prices: 1658.17
+
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: functions.clj
+
+
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+
+
+ Sum off all prices: 1658.17
+
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: functions.clj
+
+
+ Sum off all prices: 1658.17
+
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
