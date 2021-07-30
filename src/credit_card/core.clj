@@ -1,8 +1,11 @@
 (ns credit-card.core
   (:require [credit-card.db]))
 
-(def random-cvv-generator (* (rand-int 10) 100))
-(def random-card-number-generator (* (rand-int 1000) 1000))
+(refer-clojure :exclude [range iterate format max min])
+(use 'java-time)
+
+(def random-cvv-generator (* (rand-int 10) 999))
+(def random-card-number-generator (* (rand-int 999) 999))
 
 (defn create-client-data
   [name cpf email]
@@ -14,32 +17,44 @@
 
    :credit-card {:number        random-card-number-generator
                  :limit         (rand-int 1000)
-                 :validate      10
+                 :validate      (format "dd/MM/yyyy" (zoned-date-time 2028 07 30))
                  :cvv           random-cvv-generator
-                 :orders        (credit-card.db/all-orders)}})
+                 :purchases     (credit-card.db/all-purchases)}})
 
 (def client (create-client-data "Maria" 920 "maria@gmail.com"))
+(println "\n\n\n Creating Client" client)
 
 
-(defn total-by-category [orders]
-  (->> (credit-card.db/all-orders)
-    (group-by :category)
-    println
-  ))
-
-(defn total-price-by-category [orders]
-  (->> (credit-card.db/all-orders)
+(defn group-by-category [purchases]
+  (->> purchases
        (group-by :category)
-       vals
-       (map :price)
-       (+ reduce)
-    println
-  ))
+       ))
 
+(println "\n\n\n Group by: "(group-by-category (credit-card.db/all-purchases)))
 
+(defn search-by-price-or-establishment [value purchases]
+  (->> purchases
+       (filter #(or (= (:establishment %) value)
+                    (= (:price %) value)))))
 
+(println "\n\n\n Filter by Price or Establishment"(search-by-price-or-establishment "Nike" (credit-card.db/all-purchases)))
+ 
+(defn sum-purchases
+  [purchases]
+  (->> purchases
+       (map :price))
+       (reduce +))
+(println "\n\n Sum off all prices:" (sum-purchases (credit-card.db/all-purchases)))
 
+(defn total-price-by-category [purchases]
+  (->> purchases
+       (vals)
+       (group-by :category)
+       (map sum-purchases)
+       (reduce +))
+  println)
 
+(total-price-by-category (credit-card.db/all-purchases))
 
 
 
