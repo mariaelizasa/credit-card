@@ -1,32 +1,13 @@
 (ns credit-card.core
-  (:require [credit-card.db]))
+  (:require [credit-card.db :as db]
+            [credit-card.logic :as logic]))
 
-(refer-clojure :exclude [range iterate format max min])
-(use 'java-time)
+(println "\n Create client:" (logic/create-client-data "Maria" 123412312312 "maria@gmail.com"))
 
-(def random-cvv-generator (* (rand-int 10) 999))
-(def random-card-number-generator (* (rand-int 999) 999))
+(println "\n Sum off all prices:" (logic/sum-purchases (db/all-purchases)))
 
-(defn create-client-data
-  [name cpf email]
+(println "\n Total price by Category:" (logic/total-price-by-category (db/all-purchases)))
 
-  {:id cpf
-   :data {:name name
-          :cpf cpf
-          :email email}
-
-   :credit-card {:number        random-card-number-generator
-                 :limit         (rand-int 1000)
-                 :validate      (format "dd/MM/yyyy" (zoned-date-time 2028 07 30))
-                 :cvv           random-cvv-generator
-                 :purchases     (credit-card.db/all-purchases)}})
-
-(def client (create-client-data "Maria" 920 "maria@gmail.com"))
-
-(println "\n\n\n Creating Client" client)
-
-
-
-
+(println "\n Filter by Price or Establishment:" (logic/search-by-price-or-establishment "Nike" (db/all-purchases)))
 
 

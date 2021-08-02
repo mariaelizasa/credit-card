@@ -19,628 +19,373 @@ clj꞉credit-card.core꞉> 
 ; Jack-in done.
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 979020, :limit 763, :validate 20/10/2021, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:47:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
+; Syntax error macroexpanding clojure.core/ns at (credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
 ; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 768231, :limit 43, :validate 30/07/2028, :cvv 4995, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:47:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
+; Syntax error macroexpanding clojure.core/ns at (credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
 ; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
 
 clj꞉credit-card.core꞉> 
 clj꞉credit-card.core꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
 ; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 314685, :limit 192, :validate 30/07/2028, :cvv 2997, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:47:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 514485, :limit 453, :validate 30/07/2028, :cvv 999, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:48:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 943056, :limit 2, :validate 30/07/2028, :cvv 8991, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:48:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 380619, :limit 31, :validate 30/07/2028, :cvv 0, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ArityException) compiling at (src/credit_card/core.clj:48:1).
-; Wrong number of args (1) passed to: clojure.core/reduce
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 847152, :limit 696, :validate 30/07/2028, :cvv 4995, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
+{:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 25597, :limit 4866, :validate #object[java.time.ZonedDateTime 0xfa1c469 2028-07-30T00:00-03:00[America/Sao_Paulo]], :cvv 2997, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
 
  Sum off all prices: 1658.17
-; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:58:1).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 179820, :limit 656, :validate 30/07/2028, :cvv 7992, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:58:1).
-; Cannot invoke "Object.getClass()" because "x" is null
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 509490, :limit 639, :validate 30/07/2028, :cvv 2997, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-#function[clojure.core/println]
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 978021, :limit 200, :validate 30/07/2028, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:58:1).
-; Cannot invoke "Object.getClass()" because "x" is null
-(
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 630369, :limit 330, :validate 30/07/2028, :cvv 4995, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:57:1).
-; Cannot invoke "Object.getClass()" because "x" is null
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 474525, :limit 739, :validate 30/07/2028, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-1658.1699999999998
-nil
-clj꞉credit-card.core꞉> 
-; Syntax error macroexpanding clojure.core/defn at (src/credit_card/core.clj:49:1).
-; () - failed: Insufficient input at: [:fn-tail] spec: :clojure.core.specs.alpha/defn-args
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 292707, :limit 628, :validate 30/07/2028, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:63:1).
-; class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap')
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 369630, :limit 378, :validate 30/07/2028, :cvv 7992, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:59:1).
-; class java.lang.String cannot be cast to class java.util.Map$Entry (java.lang.String and java.util.Map$Entry are in module java.base of loader 'bootstrap')
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 117882, :limit 117, :validate 30/07/2028, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-1658.1699999999998
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 661338, :limit 715, :validate 30/07/2028, :cvv 2997, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-(225.63 1131.7399999999998 300.8)
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 647352, :limit 414, :validate 30/07/2028, :cvv 8991, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:62:1).
-; Cannot invoke "Object.getClass()" because "x" is null
-(
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 207792, :limit 178, :validate 30/07/2028, :cvv 5994, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-; Syntax error (ClassCastException) compiling at (src/credit_card/core.clj:62:1).
-; class clojure.lang.PersistentArrayMap cannot be cast to class java.util.Map$Entry (clojure.lang.PersistentArrayMap is in unnamed module of loader 'app'; java.util.Map$Entry is in module java.base of loader 'bootstrap')
-; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
-
-clj꞉credit-card.core꞉> 
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 523476, :limit 419, :validate 30/07/2028, :cvv 7992, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-(
-
- aaaaaaa Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}]
-
-
- aaaaaaa Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]
-225.63 
-
- aaaaaaa Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]
-1131.7399999999998 300.8)
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 732267, :limit 288, :validate 30/07/2028, :cvv 3996, :purchases [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 8, :price 200.3, :establishment Family Park, :category Leisure} {:date 9, :price 45.6, :establishment Spoletto, :category Food} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Group by Category:  {Food [{:date 1, :price 20.58, :establishment Mc Donalds, :category Food} {:date 824, :price 63.45, :establishment Burguer King, :category Food} {:date 5, :price 75.6, :establishment Sushi, :category Food} {:date 6, :price 20.4, :establishment Burguer King, :category Food} {:date 9, :price 45.6, :establishment Spoletto, :category Food}], Locker Room [{:date 2, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 3, :price 540.54, :establishment Nike, :category Locker Room} {:date 24, :price 480.9, :establishment Adidas, :category Locker Room}], Leisure [{:date 63, :price 100.5, :establishment Riot Games, :category Leisure} {:date 8, :price 200.3, :establishment Family Park, :category Leisure}]}
-
-
-
- Filter by Price or Establishment: ({:date 3, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 577422, :limit 21, :validate 30/07/2028, :cvv 8991, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
-
-
- Total price by Category: nil
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: core.clj
-; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.core, being replaced by: #'java-time/contains?
-; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.core, being replaced by: #'java-time/iterate
-; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.core, being replaced by: #'java-time/range
-; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.core, being replaced by: #'java-time/min
-; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.core, being replaced by: #'java-time/format
-; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.core, being replaced by: #'java-time/zero?
-; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.core, being replaced by: #'java-time/max
-
-
-
- Creating Client {:id 920, :data {:name Maria, :cpf 920, :email maria@gmail.com}, :credit-card {:number 406593, :limit 964, :validate 30/07/2028, :cvv 4995, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
-
-
-
- Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-
-
- Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: functions.clj
-
-
-
- Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
-
-
- Sum off all prices: 1658.17
-
-
- Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
-nil
-clj꞉credit-card.core꞉> 
-; Evaluating file: functions.clj
-
-
- Sum off all prices: 1658.17
-
 
  Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
 
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
+; Evaluating file: db.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.db, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.db, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.db, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.db, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.db, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.db, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.db, being replaced by: #'java-time/max
+#'credit-card.db/all-purchases
+clj꞉credit-card.db꞉> 
+; Evaluating file: db.clj
+; Syntax error compiling at (src/credit_card/db.clj:5:1).
+; Unsupported option(s) supplied: :exclude
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
 
+clj꞉credit-card.db꞉> 
+clj꞉credit-card.db꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 25597, :limit 4866, :validate #object[java.time.ZonedDateTime 0x67bb9644 2028-07-30T00:00-03:00[America/Sao_Paulo]], :cvv 2997, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker
+ Room}]}}
+
+ Sum off all prices: 1658.17
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
 
  Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
 nil
 clj꞉credit-card.core꞉> 
+; Evaluating file: db.clj
+; Syntax error compiling at (src/credit_card/db.clj:5:1).
+; Unsupported option(s) supplied: :exclude
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.db꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 25597, :limit 4866, :validate #object[java.time.ZonedDateTime 0x4dbd70dc 2028-07-30T00:00-03:00[America/Sao_Paulo]], :cvv 2997, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker
+ Room}]}}
+
+ Sum off all prices: 1658.17
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error compiling at (src/credit_card/logic.clj:4:1).
+; Unsupported option(s) supplied: :exclude
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error compiling at (src/credit_card/logic.clj:4:1).
+; Unsupported option(s) supplied: :exclude
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: db.clj
+; Syntax error compiling at (src/credit_card/db.clj:5:1).
+; Unsupported option(s) supplied: :exclude
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.db꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 62429, :limit 1852, :validate 30/07/2028, :cvv 8991, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+
+ Sum off all prices: 1658.17
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: db.clj
+; Syntax error (FileNotFoundException) compiling at (src/credit_card/db.clj:5:1).
+; Could not locate java_time'__init.class, java_time'.clj or java_time'.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.db꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.db꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: db.clj
+; Syntax error (FileNotFoundException) compiling at (src/credit_card/db.clj:5:1).
+; Could not locate java_time'__init.class, java_time'.clj or java_time'.cljc on classpath. Please check that namespaces with dashes use underscores in the Clojure file name.
+; Evaluation of file db.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.db꞉> 
+; Evaluating file: logic.clj
+; WARNING: contains? already refers to: #'clojure.core/contains? in namespace: credit-card.logic, being replaced by: #'java-time/contains?
+; WARNING: iterate already refers to: #'clojure.core/iterate in namespace: credit-card.logic, being replaced by: #'java-time/iterate
+; WARNING: range already refers to: #'clojure.core/range in namespace: credit-card.logic, being replaced by: #'java-time/range
+; WARNING: min already refers to: #'clojure.core/min in namespace: credit-card.logic, being replaced by: #'java-time/min
+; WARNING: format already refers to: #'clojure.core/format in namespace: credit-card.logic, being replaced by: #'java-time/format
+; WARNING: zero? already refers to: #'clojure.core/zero? in namespace: credit-card.logic, being replaced by: #'java-time/zero?
+; WARNING: max already refers to: #'clojure.core/max in namespace: credit-card.logic, being replaced by: #'java-time/max
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: logic.clj
+; Syntax error macroexpanding clojure.core/ns at (src/credit_card/logic.clj:1:1).
+; ((:require [credit-card.db] :as db)) - failed: Extra input spec: :clojure.core.specs.alpha/ns-form
+; Evaluation of file logic.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.logic꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 12629, :limit 1276, :validate dd/MM/yyyy, :cvv 5994, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+
+ Sum off all prices: 1658.17
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
+; Evaluating file: logic.clj
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 56838, :limit 2704, :validate dd/MM/yyyy, :cvv 99, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:7:1).
+; Cannot invoke "Object.getClass()" because "x" is null
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.logic꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 56838, :limit 2704, :validate dd/MM/yyyy, :cvv 99, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:7:1).
+; Cannot invoke "Object.getClass()" because "x" is null
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 56838, :limit 2704, :validate dd/MM/yyyy, :cvv 99, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:7:1).
+; Cannot invoke "Object.getClass()" because "x" is null
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 56838, :limit 2704, :validate dd/MM/yyyy, :cvv 99, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:7:1).
+; Cannot invoke "Object.getClass()" because "x" is null
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 56838, :limit 2704, :validate dd/MM/yyyy, :cvv 99, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+; Syntax error (NullPointerException) compiling at (src/credit_card/core.clj:7:1).
+; Cannot invoke "Object.getClass()" because "x" is null
+; Evaluation of file core.clj failed: class clojure.lang.Compiler$CompilerException
+
+clj꞉credit-card.core꞉> 
+clj꞉credit-card.core꞉> 
+; Evaluating file: logic.clj
+#'credit-card.logic/search-by-price-or-establishment
+clj꞉credit-card.logic꞉> 
+; Evaluating file: core.clj
+
+ Create client: {:id 123412312312, :data {:name Maria, :cpf 123412312312, :email maria@gmail.com}, :credit-card {:number 85803, :limit 2949, :validate dd/MM/yyyy, :cvv 999, :purchases [{:date 30/05/2021, :price 20.58, :establishment Mc Donalds, :category Food} {:date 16/05/2021, :price 110.3, :establishment Bolovo, :category Locker Room} {:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room} {:date 23/04/2021, :price 63.45, :establishment Burguer King, :category Food} {:date 06/02/2021, :price 100.5, :establishment Riot Games, :category Leisure} {:date 12/01/2021, :price 75.6, :establishment Sushi, :category Food} {:date 28/07/2021, :price 20.4, :establishment Burguer King, :category Food} {:date 30/12/2021, :price 200.3, :establishment Family Park, :category Leisure} {:date 22/11/2021, :price 45.6, :establishment Spoletto, :category Food} {:date 24/12/2021, :price 480.9, :establishment Adidas, :category Locker Room}]}}
+
+ Sum off all prices: 1658.17
+
+ Total price by Category: ({:category Food, :total-value 225.63} {:category Locker Room, :total-value 1131.7399999999998} {:category Leisure, :total-value 300.8})
+
+ Filter by Price or Establishment: ({:date 28/06/2021, :price 540.54, :establishment Nike, :category Locker Room})
+nil
+clj꞉credit-card.core꞉> 
+; nREPL Connection was closed
