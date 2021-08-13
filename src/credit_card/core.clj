@@ -2,7 +2,7 @@
   (:require [credit-card.db :as db]
             [credit-card.logic :as logic]))
 
-(println "\n Added Purchase" (logic/add-purchase logic/purchases (credit-card.db/all-purchases)))
+(println "\n Added Purchase" (logic/add-purchase logic/purchases (db/all-purchases)))
 
 (println "\n Create client:" (logic/create-client-data "Maria" 123412312312 "maria@gmail.com"))
 
