@@ -10,9 +10,8 @@
 
 (defn id [] (java.util.UUID/randomUUID))
 
-(def conn (db/create-and-connect-to-database))
-
-(db/create-schema conn)
+(def conn (db/create-and-connect-to-database!))
+(db/create-schemaP! conn)
 
 (s/set-compile-fn-validation! true)
 
@@ -26,36 +25,41 @@
 
 (s/defn create-purchase :- m/Purchase
   "Create Purchase"
-  [id, price :- (s/constrained Float pos?), establishment :- s/Str, category :- s/Str]
-  {
-   :purchase/id            id
-   :purchase/date          (format "dd/MM/yyyy" (local-date))
-   :purchase/price         price
-   :purchase/establishment establishment
-   :purchase/category      category
-   })
+  [id :- s/Uuid, price :- (s/constrained Float pos?), establishment :- s/Str, category :- s/Str]
+  :purchases {
+              :purchase/id            id
+              :purchase/date          (format "dd/MM/yyyy" (local-date))
+              :purchase/price         price
+              :purchase/establishment establishment
+              :purchase/category      category
+              })
 
-(def new-purchase (create-purchase (id) 1350.20  "Spoleto" "Food"))
+(def new-purchase (create-purchase (id) 1350.20 "Spoleto" "Food"))
 (d/transact conn [new-purchase])
 
 (def purchases new-purchase)
-
 (def total-purchases (add-purchase purchases (credit-card.db/all-purchases)))
 
-(s/defn create-client-data :- m/Client
+
+(s/defn create-credit-card :- m/Credit-Card
   "Create Client"
-  [name :- s/Str, cpf :- (s/constrained s/Int pos-int?), email :- s/Str]
+  []
+  :credit-card {:credit-card/number   random-card-number-generator
+                :credit-card/limit    2000.00
+                :credit-card/validate (format "dd/MM/yyyy" (zoned-date-time 2028 07 30))
+                :credit-card/cvv      random-cvv-generator
+                :credit-card/purchase total-purchases})
 
-  {:id          id
-   :data        {:name  name
-                 :cpf   cpf
-                 :email email}
 
-   :credit-card {:number    random-card-number-generator
-                 :limit     2000.00
-                 :validate  (format "dd/MM/yyyy" (zoned-date-time 2028 07 30))
-                 :cvv       random-cvv-generator
-                 :purchases total-purchases}})
+(s/defn create-customer-data :- m/Customer
+  "Create Client"
+  [id :- s/Uuid, name :- s/Str, cpf :- (s/constrained s/Int pos-int?), email :- s/Str]
+  {:customer {:customer/id          id
+              :customer/name        name
+              :customer/cpf         cpf
+              :customer/email       email
+              :costumer/credit-card (create-credit-card)}
+   })
 
 (defn sum-purchases
   "Return the sum of all Purchases"
@@ -85,5 +89,4 @@
                     (= (:price %) value)))))
 
 
-
- (db/delete-database)
+(db/delete-database!)

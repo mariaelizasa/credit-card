@@ -7,8 +7,19 @@
                  :purchase/date          s/Str
                  :purchase/id            s/Uuid})
 
-(s/def Client {:name  s/Str
-               :cpf   (s/constrained s/Int pos-int?)
-               :email s/Str})
+
+(s/def Credit-Card {:credit-card/id       s/Uuid
+                    :credit-card/number   (s/constrained s/Int pos-int?)
+                    :credit-card/cvv      (s/constrained s/Int pos-int?)
+                    :credit-card/validate s/Str
+                    :credit-card/limit    (s/constrained Float pos?)
+                    :credit-card/purchase [Purchase]
+                    })
+
+(s/def Customer {:costumer/id          s/Uuid
+                 :costumer/name        s/Str
+                 :costumer/cpf         (s/constrained s/Int pos-int?)
+                 :costumer/email       s/Str
+                 :costumer/credit-card Credit-Card})
 
 
